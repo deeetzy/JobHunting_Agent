@@ -15,7 +15,7 @@ def send_telegram_msg(message):
 
 # --- 1. CONFIGURATION ---
 # IMPORTANT: Delete this key from Google AI Studio after testing and use an Environment Variable!
-API_KEY = os.getenv("GEMINI_API_KEY") or "AIzaSyANcEeRlwNC6ey2oqzfk74U1EQDJJL430U"
+API_KEY = os.getenv("GEMINI_API_KEY")
 client = genai.Client(api_key=API_KEY)
 
 MY_PROFILE = """
