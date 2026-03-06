@@ -5,8 +5,8 @@ import requests
 from google import genai
 from playwright.async_api import async_playwright
 
-TELEGRAM_TOKEN = "8620028508:AAHzSK2dODvF5MJxeEUVSAXUvKcZ4nWUn8c"
-TELEGRAM_CHAT_ID = "667937127"
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 def send_telegram_msg(message):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"

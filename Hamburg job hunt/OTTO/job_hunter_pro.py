@@ -1,12 +1,13 @@
 import asyncio
+import os
 import sqlite3
 import requests
 from playwright.async_api import async_playwright
 from playwright_stealth import Stealth
 
 # --- CONFIG ---
-TELEGRAM_TOKEN = "8620028508:AAHzSK2dODvF5MJxeEUVSAXUvKcZ4nWUn8c"
-TELEGRAM_CHAT_ID = "667937127"
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 # The "Hamburg Top 10" Site Map
 SITES = [
